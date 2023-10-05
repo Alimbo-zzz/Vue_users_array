@@ -1,0 +1,33 @@
+{
+  "name": "vite-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite --host --open",
+    "build": "vite build",
+    "preview": "vite preview  --host --open",
+    "deploy": "gh-pages -d build"
+  },
+  "browserslist": [
+    "cover 99.5%"
+  ],
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "axios": "^1.4.0",
+    "lodash": "^4.17.21",
+    "oh-vue-icons": "^1.0.0-rc3",
+    "sass": "^1.63.6",
+    "vue": "^3.3.4",
+    "vue-lodash": "^2.1.2",
+    "vue-router": "^4.2.4",
+    "vue-social-sharing": "^4.0.0-alpha4",
+    "vuex": "^4.0.2",
+    "vuex-composition-helpers": "^2.0.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "gh-pages": "^5.0.0",
+    "vite": "^4.4.0"
+  }
+}

@@ -1,0 +1,142 @@
+.wrapper {
+	padding-top: 4em;
+	padding-bottom: 6em;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	min-width: $min_w;
+}
+
+.table-list {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	max-width: 1100px;
+	margin: 0 auto;
+	gap: 2em 1em
+}
+
+h1 {
+	margin-bottom: 1em;
+}
+
+
+.card {
+	display: flex;
+	background: #ddd;
+	box-shadow:
+		inset -0.3em -0.3em 3em rgba($color: #000000, $alpha: 0.1),
+		-0.3em -0.3em 0.8em rgba($color: #000000, $alpha: 0.1);
+
+	overflow: hidden;
+	border-radius: 1em;
+
+	img {
+		height: 150px;
+		aspect-ratio: 2/3;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+		height: 100%;
+		justify-content: space-between;
+		padding: 1em;
+	}
+
+	[data-name='age'] {
+		font-family: 'Manrope';
+	}
+
+	[data-name='date'] {
+		font-family: 'Manrope';
+	}
+
+
+}
+
+
+.head {
+	padding-bottom: 3em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1em;
+
+
+	&__block {
+		display: flex;
+		gap: 2em;
+
+		button {
+			border: none;
+			font-weight: 600;
+			border-radius: 0.3em;
+			padding: 0.5em 1em;
+			box-shadow: 0.1em 0.1em 0.5em rgba($color: #000000, $alpha: 0.25);
+			cursor: pointer;
+			transition: 0.15s;
+
+			&:active {
+				transform: scale(0.9);
+			}
+		}
+	}
+
+	input {
+		background: $yellow;
+		color: $black;
+		border: none;
+		padding: 0.5em 1em;
+		border-radius: 0.5em;
+	}
+}
+
+
+.pagination {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	margin: 2em auto;
+	max-width: min-content;
+
+
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+	}
+
+	button {
+		border: none;
+		border-radius: 10em;
+		background: $red;
+		padding: 0.2em;
+		color: #fff;
+		width: 2em;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	li {
+		font-family: 'Manrope';
+		aspect-ratio: 1/1;
+		width: 2em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $yellow;
+		border-radius: 50%;
+		cursor: pointer;
+		font-weight: bold;
+		opacity: 0.5;
+
+
+		&[data-active='true'] {
+			opacity: 1;
+		}
+	}
+}
